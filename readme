@@ -1,0 +1,191 @@
+# FileGuardian - Scanner de Sécurité Avancé
+## Vue d'ensemble du projet
+
+### Objectif
+Développer un outil CLI puissant pour l'analyse de sécurité approfondie des fichiers, capable de détecter les menaces potentielles, les métadonnées sensibles et les vulnérabilités dans une large gamme de formats de fichiers.
+
+### Public cible
+- Professionnels de la cybersécurité
+- Administrateurs système
+- Analystes de sécurité
+- Équipes de réponse aux incidents
+
+## Spécifications Techniques
+
+### 1. Architecture du Système
+
+#### 1.1 Composants principaux
+- **Core Scanner Engine**: Moteur principal d'analyse
+- **File Type Detection**: Système de détection automatique des types de fichiers
+- **Analysis Modules**: Modules spécifiques par type de fichier
+- **Reporting Engine**: Système de génération de rapports
+
+> 🔄 Évolutions futures :
+> - Plugin System
+> - Parallel Processing
+> - Cache System
+> - API Interface
+
+### 2. Capacités d'Analyse
+
+#### 2.1 Analyse de Fichiers Images
+- Métadonnées EXIF complètes
+- Données de géolocalisation
+- Steganography detection
+- Analyse des thumbnails cachés
+- Vérification des signatures numériques
+- Détection de manipulation d'image
+- Analyse des couleurs pour les données cachées
+
+#### 2.2 Documents PDF
+- JavaScript malveillant
+- Actions automatiques
+- Liens externes
+- Formulaires cachés
+- Métadonnées document
+- Fichiers embarqués
+- Structure des objets PDF
+
+#### 2.3 Documents Office
+- Macros VBA
+- Scripts embarqués
+- Liens externes
+- Métadonnées DDE
+- Objets OLE
+- Commentaires cachés
+- Données de révision
+
+#### 2.4 Fichiers Multimédia
+- Métadonnées ID3/MP4
+- Données GPS
+- Commentaires cachés
+- Fichiers joints
+- Analyse des flux de données
+
+> 🔄 Évolutions futures :
+> - Analyse des fichiers exécutables
+> - Détection avancée de stéganographie
+> - Analyse comportementale
+> - Intégration Threat Intelligence (VirusTotal, etc.)
+
+### 3. Fonctionnalités Avancées
+
+#### 3.1 Analyses Spécialisées
+- Détection de contenu malveillant basique
+- Vérification d'intégrité de fichier
+- Extraction de métadonnées avancée
+- Analyse de structure de fichier
+
+#### 3.2 Reporting
+- Formats multiples (JSON, XML, TEXT)
+- Niveaux de gravité
+- Recommandations automatiques
+- Résumé des risques
+
+> 🔄 Évolutions futures :
+> - Rapports PDF personnalisables
+> - Visualisation des données
+> - Timeline des découvertes
+> - Intégration avec outils externes
+
+### 4. Performances
+
+#### 4.1 Optimisations
+- Gestion efficace de la mémoire
+- Traitement séquentiel optimisé
+- Analyse incrémentale
+
+> 🔄 Évolutions futures :
+> - Traitement parallèle
+> - Distribution de charge
+> - Système de cache
+> - Indexation des fichiers
+
+## Interfaces Utilisateur
+
+### 1. Interface CLI
+```bash
+fileguardian scan [options] <path>
+  --recursive, -r        Scan récursif
+  --type <type>         Type de fichier spécifique
+  --output <format>     Format de sortie
+  --verbose, -v        Mode verbeux
+```
+
+> 🔄 Évolutions futures :
+> - Interface Web
+> - API REST
+> - Interface graphique native
+
+## Stack Technologique
+
+### Core
+- Python 3.11+
+
+### Librairies Principales
+- click: CLI interface
+- python-magic: Détection de type
+- pillow: Traitement d'images
+- exifread: Analyse EXIF
+- pypdf2: Analyse PDF
+- python-docx: Documents Office
+- rich: Interface console
+
+### Base de données
+- SQLite pour le stockage local
+
+> 🔄 Évolutions futures :
+> - PostgreSQL
+> - Redis pour le cache
+> - Elasticsearch pour la recherche
+
+## Roadmap de Développement
+
+### Phase 1: MVP (Hackathon)
+- Core scanner engine
+- Support des formats principaux
+- CLI basique
+- Rapports simples
+- Tests basiques
+
+### Phase 2: Améliorations Post-Hackathon
+- Amélioration des détections
+- Plus de formats supportés
+- Interface utilisateur améliorée
+- Documentation complète
+
+> 🔄 Évolutions futures :
+> - Phase 3: Features Enterprise
+> - Phase 4: Scaling & Performance
+> - Phase 5: Intégrations avancées
+
+## Tests et Validation
+
+### Tests unitaires
+- PyTest pour les tests unitaires
+- Coverage pour la couverture de code
+- Tests d'intégration basiques
+
+### Validation
+- Tests avec fichiers malformés
+- Validation des outputs
+- Tests de performance basiques
+
+## Installation et Déploiement
+
+### Prérequis
+- Python 3.11+
+- pip
+- Dépendances système basiques
+
+### Process d'installation
+```bash
+git clone <repository>
+cd fileguardian
+pip install -r requirements.txt
+```
+
+### Configuration
+- Fichier de configuration YAML
+- Variables d'environnement pour les paramètres sensibles
+- Logs configurables
