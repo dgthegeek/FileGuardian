@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: fileguardian
+Version: 0.1.0
+Requires-Dist: pillow>=10.2.0
+Requires-Dist: pypdf2>=3.0.1
+Requires-Dist: python-magic>=0.4.27

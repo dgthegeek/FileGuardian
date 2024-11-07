@@ -3,7 +3,7 @@ from typing import Dict, Any
 from PIL import Image
 from PIL.ExifTags import TAGS, GPSTAGS
 import logging
-from core.analyzer import BaseAnalyzer
+from fileguardian.core.analyzer import BaseAnalyzer
 
 logger = logging.getLogger(__name__)
 
