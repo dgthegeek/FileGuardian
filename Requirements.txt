@@ -1,0 +1,4 @@
+pillow==10.4.0  # Pour l'analyse d'images
+pypdf2==3.0.1  # Pour l'analyse PDF
+python-magic==0.4.27  # Pour la détection de type de fichier
+pytest==8.0.0  # Pour les tests
